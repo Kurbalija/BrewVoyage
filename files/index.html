@@ -16,7 +16,14 @@
                 <li><button onclick="window.location.href = '/two';">Two</button></a></li>
             </ul> 
         </nav>
-        <main></main>
+        <main>
+            <form action="/submit" method="post">
+                <label for="text">Text eingeben:</label>
+                <input type="text" id="text" name="text" required>
+                <br>
+                <button type="submit">Absenden</button>
+            </form>
+        </main>
         <footer></footer>
     </body>
 </html>

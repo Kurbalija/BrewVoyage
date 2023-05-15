@@ -3,6 +3,12 @@ var express = require('express');
 
 var app = express();
 
+app.use(express.urlencoded({ extended: true }));
+
+app.post('/submit', (req, res) => {
+  const text = req.body.text;
+});
+
 // Definiert eine Route für die Seite im ersten Parameter '/' = Startseite
 app.get('/', (req, res) => {
   // Sendet eine definierte HTML Datei als Antwort
