@@ -1,23 +1,23 @@
-var http = require('http');
-var url = require('url');
-var fs = require('fs');
+//Import von Express.js
+var express = require('express');
 
-http.createServer(function (req, res) {
-  var q = url.parse(req.url, true);
+var app = express();
 
-  fs.readFile('files/index.html', function(err, data) {
+// Definiert eine Route für die Seite im ersten Parameter '/' = Startseite
+app.get('/', (req, res) => {
+  // Sendet eine definierte HTML Datei als Antwort
+  res.sendFile(__dirname + '/files/index.html');
+});
 
-    if (err) {
-      res.writeHead(404, {'Content-Type': 'text/html'});
-      return res.end("404 Not Found");
-    }
+app.get('/one', (req, res) => {
+  res.sendFile(__dirname + '/files/one.html');
+});
 
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(data);
+app.get('/two', (req, res) => {
+  res.sendFile(__dirname + '/files/two.html');
+});
 
-    return res.end();
-  });
-
-}).listen(8080); 
-
-console.log('Server running at http://127.0.0.1:8080');
+// Startet den Webserver auf Port 8080
+app.listen(8080, () => {
+  console.log('Server läuft unter http://127.0.0.1:8080');
+});
