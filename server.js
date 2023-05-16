@@ -1,26 +1,21 @@
 //Import von Express.js
 var express = require('express');
+var path = require('path');
 
 var app = express();
 
-app.use(express.urlencoded({ extended: true }));
-
-app.post('/submit', (req, res) => {
-  const text = req.body.text;
-});
+//Richtet einen statischen Dateiserver ein
+app.use(express.static(path.join(__dirname, 'files')));
 
 // Definiert eine Route für die Seite im ersten Parameter '/' = Startseite
 app.get('/', (req, res) => {
   // Sendet eine definierte HTML Datei als Antwort
-  res.sendFile(__dirname + '/files/index.html');
+  res.sendFile(__dirname + '/files/html/login.html');
 });
 
-app.get('/one', (req, res) => {
-  res.sendFile(__dirname + '/files/one.html');
-});
-
-app.get('/two', (req, res) => {
-  res.sendFile(__dirname + '/files/two.html');
+app.get('/home', (req, res) => {
+  // Sendet eine definierte HTML Datei als Antwort
+  res.sendFile(__dirname + '/files/html/index.html');
 });
 
 // Startet den Webserver auf Port 8080
