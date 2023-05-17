@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/nav.css">
+    <script src="js/maps.js"></script>
+    <title>BrewVoyage - Map</title>
+</head>
+
+<body>
+    <nav>
+        <div class="topnav">
+            <a onclick="window.location.href = '/home';">Home</a>
+            <a onclick="window.location.href = '/wiki';">Wiki</a>
+            <a class="active" onclick="window.location.href = '/maps';">Map</a>
+            <a href="">Recipe</a>
+            <a href="">Comp</a>
+            <a onclick="window.location.href = '/test';">Test</a>
+            <a class="split" onclick="window.location.href = '/';">Login</a>
+        </div>
+    </nav>
+    <main>
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap"></script>
+
+        <div id="googleMap" style="width:100%;height:400px;">Map</div>
+        <div id="weather" style="margin-top: 20px;">Weather</div>
+        <script>
+            // Aufrufen der Funktionen
+            myMap();
+            getWeather();
+        </script>
+    </main>
+</body>
+
+</html>

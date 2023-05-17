@@ -14,12 +14,18 @@ app.get('/', (req, res) => {
 });
 
 app.get('/home', (req, res) => {
-  // Sendet eine definierte HTML Datei als Antwort
   res.sendFile(__dirname + '/files/html/index.html');
 });
 
+app.get('/maps', (req, res) => {
+  res.sendFile(__dirname + '/files/html/maps.html');
+});
+
+app.get('/wiki', (req, res) => {
+  res.sendFile(__dirname + '/files/html/wiki.html');
+});
+
 app.get('/test', (req, res) => {
-  // Sendet eine definierte HTML Datei als Antwort
   res.sendFile(__dirname + '/files/html/test.html');
 });
 

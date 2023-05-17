@@ -6,6 +6,7 @@ body {
 .topnav {
     background-color: #432d2b;
     overflow: hidden;
+    border-radius: 12px;
 }
 
 /* Styling der Links innerhalb der Navigationsleiste */
