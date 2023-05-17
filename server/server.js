@@ -5,28 +5,28 @@ var path = require('path');
 var app = express();
 
 // Richtet einen statischen Dateiserver ein
-app.use(express.static(path.join(__dirname, 'files')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Definiert eine Route für die Seite im ersten Parameter '/'
 app.get('/', (req, res) => {
   // Sendet eine definierte HTML Datei als Antwort
-  res.sendFile(__dirname + '/files/html/login.html');
+  res.sendFile(__dirname + '/public/html/login.html');
 });
 
 app.get('/home', (req, res) => {
-  res.sendFile(__dirname + '/files/html/index.html');
+  res.sendFile(__dirname + '/public/html/index.html');
 });
 
 app.get('/maps', (req, res) => {
-  res.sendFile(__dirname + '/files/html/maps.html');
+  res.sendFile(__dirname + '/public/html/maps.html');
 });
 
 app.get('/wiki', (req, res) => {
-  res.sendFile(__dirname + '/files/html/wiki.html');
+  res.sendFile(__dirname + '/public/html/wiki.html');
 });
 
 app.get('/test', (req, res) => {
-  res.sendFile(__dirname + '/files/html/test.html');
+  res.sendFile(__dirname + '/public/html/test.html');
 });
 
 // Startet den Webserver auf Port 8080
