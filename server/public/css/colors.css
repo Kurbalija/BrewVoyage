@@ -1,0 +1,29 @@
+/* COLOR STYLESHEET */
+
+/* Hier definierst du deine CSS-Variable und weist ihr einen Farbwert zu */
+:root {
+    /* Wir brauchen nicht soviele, das ist nur ein Beispiel */
+    --farbe1: #e8f4ea;
+    --farbe2: #e0f0e3;
+    --farbe3: #d2e7d6;
+    --farbe4: #c8e1cc;
+    --farbe5: #b8d8be;
+
+    --farbe6: #97ffd4;
+    --farbe7: #7bf6c3;
+    --farbe8: #69dead;
+    --farbe9: #4abd8d;
+    --farbe10:#34aa79;
+
+    --farbe11: #52bf90;
+    --farbe12: #49ab81;
+    --farbe13: #419873;
+    --farbe14: #398564;
+    --farbe15: #317256;
+
+    --farbe16: #98dd94;
+    --farbe17: #8edb8e;
+    --farbe18: #7fd885;
+    --farbe19: #76d475;
+    --farbe20: #67d482;
+}

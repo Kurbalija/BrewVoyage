@@ -2,12 +2,12 @@
 
 /* Muss noch ausgelagert werden */
 body {
-    background: #f8e1ae;
+    background: lightgreen;
 }
 
 /* Hinzufügen einer schwarzen Hintergrundfarbe zur oberen Navigation */
 .topnav {
-    background-color: #432d2b;
+    background-color: darkgreen;
     overflow: hidden;
     border-radius: 12px;
 }
@@ -22,27 +22,27 @@ body {
     font-size: 17px;
 }
 
-/* Ändern der Farbe der Links beim Überfahren */
+/* Ändern der Farbe der Links beim hovern */
 .topnav a:hover {
-    background-color: #996A51;
+    background-color: lightgreen;
     color: black;
 }
 
-/* Hinzufügen einer Farbe zum aktiven/aktuellen Link */
+/* Hinzufügen einer Farbe zum aktiven/aktuellen Reiter */
 .topnav a.active {
-    background-color: #996A51;
+    background-color: black;
     color: white;
 }
 
-/* Erstellen eines rechtsbündigen (Split) Links innerhalb der Navigationsleiste */
+/* Erstellen eines rechtsbündigen Reiter innerhalb der Navigationsleiste */
 .topnav a.split {
     float: right;
     background-color: #04AA6D;
     color: white;
 }
 
-/* Ändern der Farbe der Split-Links beim Überfahren */
+/* Ändern der Farbe des rechtsbündigen Reiters beim hovern */
 .topnav a.split:hover {
-    background-color: #996A51;
+    background-color: lightgreen;
     color: black;
 }

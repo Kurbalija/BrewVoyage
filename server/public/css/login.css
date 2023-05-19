@@ -1,7 +1,7 @@
 /* LOGIN PAGE STYLESHEET */
 
 body {
-    background: #f8e1ae;
+    background: darkgreen;
     font-family: 'Gabriola';
     display: flex;
     min-height: 90vh;
@@ -9,9 +9,9 @@ body {
 
 .login {
     color: white;
-    background: #432d2b;
-    background:
-        linear-gradient(to right, #6f4e37, #432d2b);
+    background: green;
+    /*background:
+        linear-gradient(to right, #e8f4ea, #b8d8be);*/
     margin: auto;
     box-shadow:
         0px 2px 10px rgba(0, 0, 0, 0.2),
@@ -93,7 +93,7 @@ body {
 
 footer {
     position: absolute;
-    color: #996A51;
+    color: lightgreen;
     bottom: 10px;
     padding-left: 20px;
 }
@@ -103,7 +103,7 @@ footer p {
 }
 
 footer a {
-    color: #432d2b;
+    color: lightgreen;
     text-decoration: none;
 }
 
