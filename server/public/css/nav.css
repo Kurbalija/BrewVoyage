@@ -1,10 +1,5 @@
 /* NAVBAR STYLESHEET */
 
-/* Muss noch ausgelagert werden */
-body {
-    background: lightgreen;
-}
-
 /* Hinzufügen einer schwarzen Hintergrundfarbe zur oberen Navigation */
 .topnav {
     background-color: darkgreen;

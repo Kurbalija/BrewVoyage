@@ -25,8 +25,8 @@ app.get('/wiki', (req, res) => {
   res.sendFile(__dirname + '/public/html/wiki.html');
 });
 
-app.get('/test', (req, res) => {
-  res.sendFile(__dirname + '/public/html/test.html');
+app.get('/teas', (req, res) => {
+  res.sendFile(__dirname + '/public/html/teas.html');
 });
 
 // Startet den Webserver auf Port 8080
