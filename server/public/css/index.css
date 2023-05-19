@@ -2,3 +2,10 @@ body {
     background: lightgreen;
     font-family: Arial, sans-serif;
 }
+
+#front {
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-family: Arial, sans-serif;
+}

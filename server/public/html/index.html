@@ -22,12 +22,65 @@
         </div>
     </nav>
     <main>
-        <h1>BrewVoyage</h1>
-        <p>BrewVoyage is a web application that offers a delightful journey into the world of tea. <br>It provides a
-            range of features to explore and appreciate the art of tea, <br>from discovering teahouses to accessing
-            comprehensive tea information.</p>
         <hr>UNDER CONSTRUCTION
         <hr>
+        <div id="front">
+            <h1>BrewVoyage</h1>
+
+            <p>BrewVoyage is a web application that offers a delightful journey into the world of tea. It provides a
+                range
+                of features to explore and appreciate the art of tea, from discovering teahouses to accessing
+                comprehensive
+                tea information.</p>
+
+            <h2>Features</h2>
+
+            <ul>
+                <li>
+                    <strong>Teahouse map &amp; weather information:</strong> Provides users with a map of teahouses and
+                    current weather conditions.
+                </li>
+                <li>
+                    <strong>Listing of all teas:</strong> Displays teas in cards using a <a
+                        href="https://boonaki.me/tea-api">Tea API</a>, allowing users to click on a card to open a site
+                    with
+                    more information about that specific tea. The cards also have a hollowed star in the top right
+                    corner,
+                    which can be clicked to favorite the tea.
+                </li>
+                <li>
+                    <strong>Favourites Tab:</strong> A dedicated section where users can view all their favorited teas
+                    in
+                    card format.
+                </li>
+                <li>
+                    <strong>Review section:</strong> The review section is integrated within the tea information,
+                    appearing
+                    at the bottom. Each tea has a unique ID, and when a tea is listed, the system will display all
+                    reviews
+                    submitted by other users. Reviews can be changed and deleted (PUT &amp; DELETE).
+                </li>
+                <li>
+                    <strong>Session Management:</strong> Users can create an account using JWT (JSON Web Token) for
+                    authentication and session management.
+                </li>
+                <li>
+                    <strong>Database:</strong> The database will store login credentials, review strings, and favorite
+                    boolean values. SQLite will be used as the technology for its simplicity, alternatively, H2 can be
+                    used
+                    as an alternative.
+                </li>
+                <li>
+                    <strong>Tea wiki:</strong> A comprehensive collection of information about tea, including types of
+                    tea,
+                    tea cultivation, tea processing, tea flavors and aroma profiles, tea brewing methods, tea
+                    accessories,
+                    health benefits of tea, tea ceremonies, tea culture and traditions, tea and food pairings, tea
+                    storage
+                    and preservation, specialty teas, and tea history.
+                </li>
+            </ul>
+        </div>
     </main>
 </body>
 
