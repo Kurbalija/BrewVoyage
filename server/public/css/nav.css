@@ -4,7 +4,7 @@
 .topnav {
     background-color: darkgreen;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
 /* Styling der Links innerhalb der Navigationsleiste */
@@ -19,7 +19,7 @@
 
 /* Ändern der Farbe der Links beim hovern */
 .topnav a:hover {
-    background-color: lightgreen;
+    background-color: green;
     color: black;
 }
 

@@ -29,6 +29,10 @@ app.get('/teas', (req, res) => {
   res.sendFile(__dirname + '/public/html/teas.html');
 });
 
+app.get('/fav', (req, res) => {
+  res.sendFile(__dirname + '/public/html/fav.html');
+});
+
 // Startet den Webserver auf Port 8080
 app.listen(8080, () => {
   console.log('Server läuft unter http://127.0.0.1:8080');

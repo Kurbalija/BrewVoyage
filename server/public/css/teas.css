@@ -10,14 +10,17 @@ body {
 
 article {
   background-color: lightgoldenrodyellow;
-  border-radius: 16px;
+  border-radius: 10px;
   padding: 16px;
   margin: 8px;
   border: 1px solid black;
   font-family: Arial, sans-serif;
-  width: 250px; /* Fixed width for each article */
-  flex-basis: 250px; /* Fixed flex basis for each article */
-  box-sizing: border-box; /* Include border and padding in the width calculation */
+  width: 250px;
+  /* Fixed width for each article */
+  flex-basis: 250px;
+  /* Fixed flex basis for each article */
+  box-sizing: border-box;
+  /* Include border and padding in the width calculation */
 }
 
 article img {
@@ -37,15 +40,19 @@ article:hover {
 /* Media queries for responsive design */
 @media screen and (max-width: 768px) {
   article {
-    width: calc(50% - 20px); /* 2 articles per row */
-    flex-basis: calc(50% - 20px); /* 2 articles per row */
+    width: calc(50% - 20px);
+    /* 2 articles per row */
+    flex-basis: calc(50% - 20px);
+    /* 2 articles per row */
   }
 }
 
 @media screen and (max-width: 480px) {
   article {
-    width: 100%; /* 1 article per row */
-    flex-basis: 100%; /* 1 article per row */
+    width: 100%;
+    /* 1 article per row */
+    flex-basis: 100%;
+    /* 1 article per row */
   }
 }
 
@@ -54,7 +61,7 @@ article:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  
+
 }
 
 .loader {
@@ -67,6 +74,11 @@ article:hover {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

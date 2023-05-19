@@ -4,34 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/maps.css">
-    <script src="js/maps.js"></script>
-    <title>BrewVoyage - Map</title>
+    <link rel="stylesheet" href="css/index.css">
+    <title>BrewVoyage - Home</title>
 </head>
 
 <body>
     <nav>
+        <!-- Navigationsleiste -->
         <div class="topnav">
             <a onclick="window.location.href = '/home';">Home</a>
             <a onclick="window.location.href = '/wiki';">Wiki</a>
-            <a class="active" onclick="window.location.href = '/maps';">Map</a>
+            <a onclick="window.location.href = '/maps';">Map</a>
             <a onclick="window.location.href = '/teas';">Teas</a>
-            <a onclick="window.location.href = '/fav';">Favourites</a>
+            <a class="active" onclick="window.location.href = '/fav';">Favourites</a>
 
             <a class="split" onclick="window.location.href = '/';">Logout</a>
         </div>
     </nav>
     <main>
+        <h1>Favourites</h1>
         <hr>UNDER CONSTRUCTION
         <hr>
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap"></script>
-
-        <div id="googleMap">Map</div>
-        <div id="weather">Weather</div>
-        <script>
-            myMap();
-            getWeather();
-        </script>
     </main>
 </body>
 
