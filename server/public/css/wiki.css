@@ -1,3 +1,55 @@
+/* WIKI STYLESHEET */
 body {
     background: lightgreen;
+}
+
+/* SIDENAV */
+
+.sidenav {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    /* Adjust this distance from the top based on your top navigation's height */
+    width: 200px;
+    height: calc(100% - 60px);
+    /* Adjust this height calculation based on the top navigation's height */
+    background-color: darkgreen;
+    padding: 10px;
+    border-radius: 10px;
+    overflow-y: auto;
+    color: #f2f2f2;
+    margin: 20px;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidenav li {
+    margin-bottom: 10px;
+}
+
+.sidenav a {
+    text-decoration: none;
+    display: block;
+    padding: 8px 16px;
+    color: #f2f2f2;
+}
+
+.sidenav a:hover {
+    background-color: green;
+}
+
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
 }

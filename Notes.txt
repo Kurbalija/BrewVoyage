@@ -1,0 +1,14 @@
+    Tee: https://en.wikipedia.org/api/rest_v1/page/summary/Tea
+    Teeanbau: https://en.wikipedia.org/api/rest_v1/page/summary/Tea_production_in_[Country_Name]
+    Teeverarbeitung: https://en.wikipedia.org/api/rest_v1/page/summary/Tea_processing
+    Teesorten: https://en.wikipedia.org/api/rest_v1/page/summary/Types_of_tea
+    Geschmacks- und Aromaprofile von Tee: https://en.wikipedia.org/api/rest_v1/page/summary/Tea_tasting
+    Teezubereitungsmethoden: https://en.wikipedia.org/api/rest_v1/page/summary/Tea_preparation
+    Teegeschirr und Teezubehör: https://en.wikipedia.org/api/rest_v1/page/summary/Teaware
+    Gesundheitliche Vorteile von Tee: https://en.wikipedia.org/api/rest_v1/page/summary/Health_effects_of_tea
+    Teeceremonien: https://en.wikipedia.org/api/rest_v1/page/summary/Tea_ceremony
+    Tee-Kultur und -Traditionen: https://en.wikipedia.org/api/rest_v1/page/summary/Tea_culture
+    Tee- und Speisenkombinationen: https://en.wikipedia.org/api/rest_v1/page/summary/Tea_and_food_pairing
+    Teeaufbewahrung und -konservierung: https://en.wikipedia.org/api/rest_v1/page/summary/Tea_storage_and_preservation
+    Spezialtees: https://en.wikipedia.org/api/rest_v1/page/summary/Specialty_tea
+    Tee-Geschichte: https://en.wikipedia.org/api/rest_v1/page/summary/History_of_tea
