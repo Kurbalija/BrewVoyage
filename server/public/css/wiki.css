@@ -1,24 +1,25 @@
 /* WIKI STYLESHEET */
 body {
     background: lightgreen;
+    font-family: Arial, sans-serif;
+}
+
+/* GRID CONTAINER */
+.container {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-gap: 10px;
+    margin-top: 10px;
 }
 
 /* SIDENAV */
-
 .sidenav {
-    position: fixed;
-    left: 0;
-    top: 60px;
-    /* Adjust this distance from the top based on your top navigation's height */
-    width: 200px;
-    height: calc(100% - 60px);
-    /* Adjust this height calculation based on the top navigation's height */
     background-color: darkgreen;
+    border: 1px solid black;
     padding: 10px;
     border-radius: 10px;
     overflow-y: auto;
     color: #f2f2f2;
-    margin: 20px;
 }
 
 .sidenav ul {
@@ -28,7 +29,7 @@ body {
 }
 
 .sidenav li {
-    margin-bottom: 10px;
+    margin:auto
 }
 
 .sidenav a {
@@ -42,14 +43,11 @@ body {
     background-color: green;
 }
 
-
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-
-    .sidenav a {
-        font-size: 18px;
-    }
+/* CONTENT */
+.content {
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
+    padding: 16px;
+    border: 1px solid black;
+    overflow-y: auto;
 }

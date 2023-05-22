@@ -1,5 +1,6 @@
 body {
   background: lightgreen;
+  font-family: Arial, sans-serif;
 }
 
 #tea-container {
@@ -14,7 +15,6 @@ article {
   padding: 16px;
   margin: 8px;
   border: 1px solid black;
-  font-family: Arial, sans-serif;
   width: 250px;
   /* Fixed width for each article */
   flex-basis: 250px;
