@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/maps.css">
     <script src="js/maps.js"></script>
@@ -24,10 +25,9 @@
     <main>
         <hr>UNDER CONSTRUCTION
         <hr>
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap"></script>
-        <div id="googleMap">Map</div>
         <div id="weather">Weather</div>
-        <script>
+        <div id="googleMap">Map</div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARQ_CSrDVOmiPWAkMPee2R739vQ6LiXRs&libraries=places&callback=myMap">
             myMap();
             getWeather();
         </script>
