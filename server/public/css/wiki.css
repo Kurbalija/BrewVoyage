@@ -51,3 +51,10 @@ body {
     border: 1px solid black;
     overflow-y: auto;
 }
+
+.content img {
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
+    
+}
