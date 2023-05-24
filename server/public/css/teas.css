@@ -1,3 +1,4 @@
+/* teas.css */
 body {
   background: lightgreen;
   font-family: Arial, sans-serif;
@@ -63,7 +64,6 @@ article:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
-
 }
 
 .loader {
@@ -83,4 +83,19 @@ article:hover {
   100% {
     transform: rotate(360deg);
   }
+}
+
+#filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 16px;
+}
+
+#filter-container label {
+  margin-right: 8px;
+}
+
+#filter-container select {
+  margin-right: 16px;
 }

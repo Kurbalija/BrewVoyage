@@ -1,5 +1,5 @@
 Small:
-- auslagerung API keys
+- auslagerung API key
 - mouse hovering überall anpassen
 - Routing Vorschlag von Herrn Goldschmied
 - Favourites checkbox an den cards
