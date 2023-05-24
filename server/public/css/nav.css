@@ -23,6 +23,7 @@
 .topnav a:hover {
     background-color: green;
     color: black;
+    cursor: pointer;
 }
 
 /* Hinzufügen einer Farbe zum aktiven/aktuellen Reiter */
