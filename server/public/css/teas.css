@@ -21,6 +21,7 @@ article {
   /* Fixed flex basis for each article */
   box-sizing: border-box;
   /* Include border and padding in the width calculation */
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 article img {

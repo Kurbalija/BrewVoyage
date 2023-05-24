@@ -20,6 +20,7 @@ body {
     border-radius: 10px;
     overflow-y: auto;
     color: #f2f2f2;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 .sidenav ul {
@@ -50,6 +51,7 @@ body {
     padding: 16px;
     border: 1px solid black;
     overflow-y: auto;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 .content img {
