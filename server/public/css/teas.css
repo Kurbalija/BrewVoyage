@@ -36,6 +36,7 @@ article img {
 article:hover {
   transform: scale(1.02);
   border: 2px solid black;
+  cursor: pointer;
 }
 
 /* Media queries for responsive design */
