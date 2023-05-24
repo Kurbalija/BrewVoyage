@@ -1,0 +1,14 @@
+Small:
+- auslagerung API keys
+- mouse hovering überall anpassen
+- Routing Vorschlag von Herrn Goldschmied
+- Favourites checkbox an den cards
+- tea cards besser stylen
+- Css neustrukturieren und minimieren
+- Filter funktion bei teas
+
+Big:
+- Database
+- Session Managment und Login
+- Favourites Tab
+- Review section on click
