@@ -21,7 +21,8 @@ async function loadWikiData(topic) {
 
   // Create and append new content to the div
   const h1 = document.createElement('h1');
-  h1.textContent = topic;
+  const selectedText = this.textContent; // Get the selected li text
+  h1.textContent = selectedText;
   contentDiv.appendChild(h1);
 
   if (imageUrl) {
@@ -47,7 +48,7 @@ window.onload = function () {
       // Get the topic from the data-custom-value attribute
       const topic = item.getAttribute("data-custom-value");
       // Call the loadWikiData function with the topic as the argument
-      loadWikiData(topic);
+      loadWikiData.call(this, topic); // Pass the selected li element as 'this'
     });
   });
 };
