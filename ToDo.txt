@@ -12,3 +12,4 @@ Big:
 - Session Managment und Login
 - Favourites Tab
 - Review section on click
+- POST, PUT, and DELETE, each method at least on one HTTP endpoint.
