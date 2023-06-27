@@ -5,14 +5,18 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/server.js",
-    "nodemon": "nodemon server/server.js"
-  },
+    "start": "npm run start-server & npm run start-auth",
+    "start-server": "nodemon server.js",
+    "start-auth": "nodemon authServer.js"
+  }
+  ,
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
     "sqlite3": "^5.1.6"
   },
   "devDependencies": {
