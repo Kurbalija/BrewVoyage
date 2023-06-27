@@ -1,48 +1,55 @@
-// Import von Express.js
-var express = require('express');
-var path = require('path');
-var app = express();
-const sqlite3 = require('sqlite3').verbose();
+const express = require('express');
+const path = require('path');
+const {loginUser, registerUser} = require('./login.js');
 
-// Richtet eine Datenbank Datei ein
-const db = new sqlite3.Database('server/database/login.db', (err) => {
-    if (err) {
-        console.error(err.message);
-    } else {
-        console.log('Connected to the database.');
-    }
-});
+const app = express();
 
-// Richtet einen statischen Dateiserver ein
+// Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Definiert eine Route für die Seite im ersten Parameter '/'
-app.get('/', (req, res) => {
-    // Sendet eine definierte HTML Datei als Antwort
-    res.sendFile(__dirname + '/public/html/login.html');
+// Enable URL-encoded form data parsing
+app.use(express.urlencoded({extended: true}));
+
+// Define routes and corresponding HTML files
+const routes = [
+    {path: '/', file: 'login.html'},
+    {path: '/home', file: 'index.html'},
+    {path: '/maps', file: 'maps.html'},
+    {path: '/wiki', file: 'wiki.html'},
+    {path: '/teas', file: 'teas.html'},
+];
+
+// Set up routes dynamically
+routes.forEach(route => {
+    app.get(route.path, (req, res) => {
+        // Send the corresponding HTML file as the response
+        res.sendFile(path.join(__dirname, 'public', 'html', route.file));
+    });
 });
 
-app.get('/home', (req, res) => {
-    res.sendFile(__dirname + '/public/html/index.html');
-});
+// Handle authentication requests
+app.post('/login', handleAuth(loginUser, 'User logged in successfully', 'Invalid username or password'));
+app.post('/signup', handleAuth(registerUser, 'User registered successfully', 'Failed to register user'));
 
-app.get('/maps', (req, res) => {
-    res.sendFile(__dirname + '/public/html/maps.html');
-});
+// Function to handle authentication requests
+function handleAuth(method, successMsg, failureMsg) {
+    return (req, res) => {
+        const {username, password} = req.body;
+        // Call the provided method for authentication
+        method(username, password, (err) => {
+            if (err) {
+                // Return error response if authentication fails
+                res.json({success: false, message: `${failureMsg}: ${err.message}`});
+            } else {
+                // Return success response if authentication succeeds
+                res.json({success: true, message: successMsg});
+            }
+        });
+    };
+}
 
-app.get('/wiki', (req, res) => {
-    res.sendFile(__dirname + '/public/html/wiki.html');
-});
-
-app.get('/teas', (req, res) => {
-    res.sendFile(__dirname + '/public/html/teas.html');
-});
-
-app.get('/fav', (req, res) => {
-    res.sendFile(__dirname + '/public/html/fav.html');
-});
-
-// Startet den Webserver auf Port 8080
-app.listen(8080, () => {
-    console.log('Server läuft unter http://127.0.0.1:8080');
+const port = 8080;
+// Start the server
+app.listen(port, () => {
+    console.log(`Server läuft unter http://127.0.0.1:${port}`);
 });

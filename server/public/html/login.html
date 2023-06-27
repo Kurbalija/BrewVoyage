@@ -5,33 +5,34 @@
     <meta charset="UTF-8">
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/login.css">
-    <title>BrewVoyage - Login</title>
+    <title>BrewVoyage - Login/Signup</title>
 </head>
 
 <body>
-    <main>
-        <!-- LogIn Fenster -->
-        <section class='login' id='login'>
-            <div class='head'>
-                <div class="logo">&#x2615;</div>
-                <h1 class='company'>BrewVoyage</h1>
-            </div>
-            <p class='msg'>Welcome back</p>
-            <div class='form'>
-                <form>
-                    <input type="text" placeholder='Email' class='text' id='username' required><br>
-                    <input type="password" placeholder='Password' class='password'><br>
-                    <a onclick="window.location.href = '/home';" class='btn-login' id='do-login'>Login</a>
-                    <a href="#" class='forgot'>Sign up</a>
-                </form>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <!-- Credentials -->
-        <p>Made with <span class='heart'>&#x2615;</span> by <a href='https://github.com/Kurbalija/BrewVoyage'>Aleksandar
-                Kurbalija & Alexander Kroneiser</a></p>
-    </footer>
+<main>
+    <!-- LogIn/Signup Fenster -->
+    <section class='login' id='login'>
+        <div class='head'>
+            <div class="logo">&#x2615;</div>
+            <h1 class='company'>BrewVoyage</h1>
+        </div>
+        <p class='msg'>Welcome back</p>
+        <div class='form'>
+            <form id="authForm" method="post">
+                <input type="text" placeholder='Username' class='text' name='username' required><br>
+                <input type="password" placeholder='Password' class='password' name='password' required><br>
+                <button type='button' class='btn-login' id='do-login'>Login</button>
+                <button type='button' class='btn-login' id='do-signup'>Sign up</button>
+            </form>
+        </div>
+    </section>
+</main>
+<footer>
+    <!-- Credentials -->
+    <p>Made with <span class='heart'>&#x2615;</span> by <a href='https://github.com/Kurbalija/BrewVoyage'>Aleksandar
+        Kurbalija & Alexander Kroneiser</a></p>
+</footer>
+<script src="js/client.js"></script>
 </body>
 
 </html>
