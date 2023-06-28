@@ -1,5 +1,5 @@
 GET http://localhost:3000/home
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGVzdCIsImlhdCI6MTY4NzkxNDU1OCwiZXhwIjoxNjg3OTE4MTU4fQ.AqJFEA_LJWb4tdwMXazwAqj71bH72MUwZMhI8aDyJjU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGVzdCIsImlhdCI6MTY4Nzk3MTE2MSwiZXhwIjoxNjg3OTc0NzYxfQ.Xa6J3lKwTgRJoTcugDt4hIXxlIWi4ijRWT7T1OJyJeU
 
 ###
 
@@ -25,5 +25,6 @@ POST http://localhost:4000/login
 Content-Type: application/json
 
 {
-  "username": "Jim"
+  "username": "Test",
+  "password": "1234"
 }
