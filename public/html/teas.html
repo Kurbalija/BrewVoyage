@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/teas.css">
     <script src="js/teas.js" defer></script>
+    <script src="js/tokenheader.js"></script>
 </head>
 <body>
     <nav>
         <div class="topnav">
-            <a onclick="window.location.href = '/home';">Home</a>
-            <a onclick="window.location.href = '/wiki';">Wiki</a>
-            <a onclick="window.location.href = '/maps';">Map</a>
-            <a class="active" onclick="window.location.href = '/teas';">Teas</a>
-            <a onclick="window.location.href = '/fav';">Favourites</a>
+            <a id="home-link"onclick="window.location.href = '/home';">Home</a>
+            <a id="wiki-link"onclick="window.location.href = '/wiki';">Wiki</a>
+            <a id="maps-link"onclick="window.location.href = '/maps';">Map</a>
+            <a id="teas-link"class="active" onclick="window.location.href = '/teas';">Teas</a>
+
             <a class="split" onclick="window.location.href = '/';">Logout</a>
         </div>
     </nav>

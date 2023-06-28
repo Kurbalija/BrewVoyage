@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/wiki.css">
     <script src="js/wiki.js"></script>
+    <script src="js/tokenheader.js"></script>
     <title>BrewVoyage - Wiki</title>
 </head>
 
 <body>
     <nav>
         <div class="topnav">
-            <a onclick="window.location.href = '/home';">Home</a>
-            <a class="active" onclick="window.location.href = '/wiki';">Wiki</a>
-            <a onclick="window.location.href = '/maps';">Map</a>
-            <a onclick="window.location.href = '/teas';">Teas</a>
-            <a onclick="window.location.href = '/fav';">Favourites</a>
+            <a id="home-link" onclick="window.location.href = '/home';">Home</a>
+            <a id="wiki-link" class="active" onclick="window.location.href = '/wiki';">Wiki</a>
+            <a id="maps-link" onclick="window.location.href = '/maps';">Map</a>
+            <a id="teas-link" onclick="window.location.href = '/teas';">Teas</a>
 
             <a class="split" onclick="window.location.href = '/';">Logout</a>
         </div>

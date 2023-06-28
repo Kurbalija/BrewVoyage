@@ -5,6 +5,10 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const jwt = require('jsonwebtoken');
+const login = require('./login');
+const cors = require('cors');
+
+app.use(cors());
 
 // Parse incoming JSON data
 app.use(express.json());
@@ -40,27 +44,48 @@ app.delete('/logout', (req, res) => {
 
 // Route to handle user login and issue access and refresh tokens
 app.post('/login', (req, res) => {
-  // Authenticate User
-  // (You can add your own authentication logic here)
-
-  // Get the username from the request body
+  // Get the username and password from the request body
   const username = req.body.username;
-  // Create a user object
-  const user = { name: username };
+  const password = req.body.password;
 
-  // Generate an access token and a refresh token
-  const accessToken = generateAccessToken(user);
-  const refreshToken = jwt.sign(user, process.env.REFRESH_TOKEN_SECRET);
-  // Store the refresh token
-  refreshTokens.push(refreshToken);
+  // Authenticate user
+  login.loginUser(username, password, (err, user) => {
+    if (err) {
+      return res.status(403).json({ message: err.message });
+    }
 
-  // Send the access token and refresh token as a response
-  res.json({ accessToken: accessToken, refreshToken: refreshToken });
+    // Generate an access token and a refresh token
+    const accessToken = generateAccessToken({ name: user.username });
+    const refreshToken = jwt.sign({ name: user.username }, process.env.REFRESH_TOKEN_SECRET);
+
+    // Store the refresh token
+    refreshTokens.push(refreshToken);
+
+    // Send the access token and refresh token as a response
+    res.json({ accessToken: accessToken, refreshToken: refreshToken });
+  });
+});
+
+// Route to handle user registration
+app.post('/register', (req, res) => {
+  // Get the username and password from the request body
+  const username = req.body.username;
+  const password = req.body.password;
+
+  // Register the user
+  login.registerUser(username, password, (err) => {
+    if (err) {
+      return res.status(400).json({ message: err.message });
+    }
+
+    // User registered successfully
+    res.json({ message: 'User registered successfully' });
+  });
 });
 
 // Function to generate an access token
 function generateAccessToken(user) {
-  return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '15s' });
+  return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
 }
 
 // Start the server

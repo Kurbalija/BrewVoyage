@@ -6,6 +6,7 @@
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/tokenheader.js"></script>
     <title>BrewVoyage - Home</title>
 </head>
 
@@ -13,11 +14,10 @@
     <nav>
         <!-- Navigationsleiste -->
         <div class="topnav">
-            <a class="active" onclick="window.location.href = '/home';">Home</a>
-            <a onclick="window.location.href = '/wiki';">Wiki</a>
-            <a onclick="window.location.href = '/maps';">Map</a>
-            <a onclick="window.location.href = '/teas';">Teas</a>
-            <a onclick="window.location.href = '/fav';">Favourites</a>
+            <a id="home-link" class="active" onclick="window.location.href = '/home';">Home</a>
+            <a id="wiki-link" onclick="window.location.href = '/wiki';">Wiki</a>
+            <a id="maps-link" onclick="window.location.href = '/maps';">Map</a>
+            <a id="teas-link" onclick="window.location.href = '/teas';">Teas</a>
 
             <a class="split" onclick="window.location.href = '/';">Logout</a>
         </div>
