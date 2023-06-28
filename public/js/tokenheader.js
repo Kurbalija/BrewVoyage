@@ -39,3 +39,26 @@ function sendAuthenticatedRequest(url, options) {
     });
 }
 
+document.getElementById('logoutButton').addEventListener('click', function() {
+  // Fetch options for a DELETE request
+  const options = {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      token: refreshToken // replace 'refreshToken' with the actual refresh token
+    })
+  };
+
+  // Make the DELETE request
+  fetch('/logout', options)
+    .then(response => {
+      if (!response.ok) throw new Error(response.status);
+      // If the logout is successful, redirect to home page
+      window.location.href = '/';
+    })
+    .catch(error => {
+      console.log('Error:', error);
+    });
+});
