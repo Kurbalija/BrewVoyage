@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken');
 const login = require('./login');
 const cors = require('cors');
 
-app.use(cors());
+app.use(cors("*"));
 
 // Parse incoming JSON data
 app.use(express.json());

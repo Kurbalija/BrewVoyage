@@ -37,6 +37,3 @@ BrewVoyage is a web application that offers a delightful journey into the world 
 - **C1:** The system could consume at least three external REST web services.
 - **C2:** The HTTP endpoints of the BE component could return the data as JSON and XML.
 - **C3:** The BE component of the system could provide a PATCH HTTP endpoint, which is consumed by the FE component.
-
-
-test

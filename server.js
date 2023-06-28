@@ -6,16 +6,23 @@ const express = require('express');
 const app = express();
 const jwt = require('jsonwebtoken');
 const path = require('path');
+const cookieParser = require("cookie-parser");
+
+app.use(cookieParser());
 
 // Parse incoming JSON data
 app.use(express.json());
 
 // Middleware function to authenticate the token
 function authenticateToken(req, res, next) {
+
+  const token = req.cookies?.accessToken;
+
+  console.log(token);
   // Get the authorization header
-  const authHeader = req.headers['authorization'];
-  // Extract the token from the header
-  const token = authHeader && authHeader.split(' ')[1];
+  // const authHeader = req.headers['authorization'];
+  // // Extract the token from the header
+  // const token = authHeader && authHeader.split(' ')[1];
   // If no token is found, send unauthorized status
   if (token == null) return res.sendStatus(401);
 

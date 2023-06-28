@@ -10,6 +10,11 @@ document.getElementById('do-login').addEventListener('click', function() {
             var response = JSON.parse(this.responseText);
             localStorage.setItem('accessToken', response.accessToken);
             localStorage.setItem('refreshToken', response.refreshToken);
+            // set cookies
+            const accessTokenExpires = getExpiresDate(response.accessToken);
+            setCookie('accessToken', response.accessToken, accessTokenExpires);
+            const refreshTokenExpires = getExpiresDate(response.refreshToken);
+            setCookie('refreshToken', response.refreshToken, refreshTokenExpires);
             window.location.href = "/home";
         } else {
             // handle error
@@ -31,3 +36,14 @@ document.getElementById('do-signup').addEventListener('click', function() {
         }
     }
 });
+
+// Extract expires date from JWT
+function getExpiresDate(jwtToken) {
+    const jwt = JSON.parse(atob(jwtToken.split('.')[1]));
+    return new Date(jwt.exp * 1000);
+}
+
+// Set a cookie
+function setCookie(cname, cvalue, expires) {
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
