@@ -2,6 +2,16 @@
 
 BrewVoyage is a web application that offers a delightful journey into the world of tea. It provides a range of features to explore and appreciate the art of tea, from discovering teahouses to accessing comprehensive tea information.
 
+## Getting Started
+
+These instructions will guide you on how to run the BrewVoyage web application on your local machine.
+
+- **Install the required packages:** Run npm install in the root directory of the project to install all required packages listed in package.json.
+- **Start the server:** Run npm run start-server in the terminal to start the main server.
+- **Start the authentication server:** Open a new terminal window, navigate to the project's root directory and run npm run start-auth to start the authentication server.
+
+After successfully starting both servers, you can now access the BrewVoyage application on your localhost (typically accessible at http://localhost:3000 or a similar address, depending on your environment setup).
+
 ## Features
 
 - **Teahouse map & weather information:** Provides users with a map of teahouses and current weather conditions.

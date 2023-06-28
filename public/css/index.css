@@ -1,3 +1,6 @@
+#front {
+    margin-top: 10px; /* Adjust this value as needed */
+}
 body {
     background: lightgreen;
     font-family: Arial, sans-serif;
