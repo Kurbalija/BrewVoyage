@@ -10,6 +10,69 @@ async function fetchTeaData() {
   populateFilters(allTeas);
   displayTeas(allTeas);
 }
+// function for when a tea is clicked
+function openModal(tea) {
+    const modal = document.getElementById('tea-modal');
+    const modalTeaName = document.getElementById('modal-tea-name');
+    const modalTeaDetails = document.getElementById('modal-tea-details');
+
+    // clicked image is filled with the informations
+    modalTeaName.textContent = tea.name;
+    modalTeaDetails.innerHTML = `
+    <img class="modal-tea-image" src="${tea.image}" alt="${tea.name}">
+    <p><strong>Origin:</strong> ${tea.origin}</p>
+    <p><strong>Type:</strong> ${tea.type}</p>
+    <p><strong>Caffeine:</strong> ${tea.caffeine}</p>
+    <p><strong>Description:</strong> ${tea.description}</p>
+    <p><strong>Taste:</strong> ${tea.tasteDescription}</p>
+    <div class="text-field-container">
+    <hr>
+     <div class="additional-comments-container">
+    <p><strong>Comment on this tea:</strong></p>
+    <textarea id="additional-comments" rows="4" cols="50" placeholder="Write here"></textarea>
+    <p><strong>User Comments:</strong></p>
+    <div class="comments-container">
+      <div class="comment">
+        <span class="username">Username1:</span>
+        <div class="comment-box">
+          This tea has a delightful floral aroma and a smooth, mellow taste.
+        </div>
+      </div>
+      <div class="comment">
+        <span class="username">Username2:</span>
+        <div class="comment-box">
+          The tea leaves a refreshing aftertaste and pairs well with a hint of lemon.
+        </div>
+      </div>
+      <div class="comment">
+        <span class="username">Username3:</span>
+        <div class="comment-box">
+          I love the bold and robust flavor of this tea. It's perfect for starting my day.
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
+
+    // show the modal
+    modal.style.display = 'block';
+
+    // close button
+    const closeBtn = document.querySelector('.close');
+    closeBtn.addEventListener('click', closeModal);
+
+    // close when clicking outside
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+}
+
+function closeModal() {
+    const modal = document.getElementById('tea-modal');
+    modal.style.display = 'none';
+}
 
 // Create a tea article element based on the tea object
 function createTeaArticle(tea) {
@@ -24,6 +87,10 @@ function createTeaArticle(tea) {
     ${tea.tasteDescription ? `<p><strong>Taste:</strong> ${tea.tasteDescription}</p>` : ''}
   `;
 
+    // Event handler for tea window
+    article.addEventListener('click', () => {
+        openModal(tea);
+    });
   // Remove img element if the image fails to load
   const imgElement = article.querySelector('img');
   if (imgElement) {

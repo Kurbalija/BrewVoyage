@@ -16,7 +16,7 @@
             <a id="wiki-link"onclick="window.location.href = '/wiki';">Wiki</a>
             <a id="maps-link"onclick="window.location.href = '/maps';">Map</a>
             <a id="teas-link"class="active" onclick="window.location.href = '/teas';">Teas</a>
-
+            
             <a class="split" onclick="window.location.href = '/';">Logout</a>
         </div>
     </nav>
@@ -40,5 +40,12 @@
     </div>
     <main id="tea-container"></main>
     <script src="js/teas.js" defer></script>
+    <div id="tea-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-tea-name"></h2>
+            <div id="modal-tea-details"></div>
+        </div>
+    </div>
 </body>
 </html>
