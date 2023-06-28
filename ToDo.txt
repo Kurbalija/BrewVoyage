@@ -10,10 +10,5 @@ Small:
 Big:
 - Database
 - Session Managment und Login
-- Favourites Tab
-- Review section on click
 - POST, PUT, and DELETE, each method at least on one HTTP endpoint.
 
-Note:
-- signup with no password forbid
-- signup success alert
