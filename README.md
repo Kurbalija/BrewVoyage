@@ -5,8 +5,7 @@ BrewVoyage is a web application that offers a delightful journey into the world 
 ## Features
 
 - **Teahouse map & weather information:** Provides users with a map of teahouses and current weather conditions.
-- **Listing of all teas:** Displays teas in cards using a [Tea API](https://boonaki.me/tea-api), allowing users to click on a card to open a site with more information about that specific tea. The cards also have a hollowed star in the top right corner, which can be clicked to favorite the tea.
-- **Review section:** The review section is integrated within the tea information, appearing at the bottom. Each tea has a unique ID, and when a tea is listed, the system will display all reviews submitted by other users. Reviews can be changed and deleted (PUT & DELETE).
+- **Listing of all teas:** Displays teas in cards using a [Tea API](https://boonaki.me/tea-api).
 - **Session Management:** Users can create an account using JWT (JSON Web Token) for authentication and session management.
 - **Database:** The database will store the login credentials. We use SQLite3.
 - **Tea wiki:** A comprehensive collection of information about tea, including types of tea, tea cultivation, tea processing, tea flavors and aroma profiles, tea brewing methods, tea accessories, health benefits of tea, tea ceremonies, tea culture and traditions, tea and food pairings, tea storage and preservation, specialty teas, and tea history.
