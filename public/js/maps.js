@@ -40,6 +40,7 @@ function myMap() {
             map: map,
             position: place.geometry.location,
             title: place.name,
+            animation: google.maps.Animation.DROP
         });
 
         var infoWindow = new google.maps.InfoWindow({
