@@ -25,34 +25,7 @@ function openModal(tea) {
     <p><strong>Caffeine:</strong> ${tea.caffeine}</p>
     <p><strong>Description:</strong> ${tea.description}</p>
     <p><strong>Taste:</strong> ${tea.tasteDescription}</p>
-    <div class="text-field-container">
-    <hr>
-     <div class="additional-comments-container">
-    <p><strong>Comment on this tea:</strong></p>
-    <textarea id="additional-comments" rows="4" cols="50" placeholder="Write here"></textarea>
-    <p><strong>User Comments:</strong></p>
-    <div class="comments-container">
-      <div class="comment">
-        <span class="username">Username1:</span>
-        <div class="comment-box">
-          This tea has a delightful floral aroma and a smooth, mellow taste.
-        </div>
-      </div>
-      <div class="comment">
-        <span class="username">Username2:</span>
-        <div class="comment-box">
-          The tea leaves a refreshing aftertaste and pairs well with a hint of lemon.
-        </div>
-      </div>
-      <div class="comment">
-        <span class="username">Username3:</span>
-        <div class="comment-box">
-          I love the bold and robust flavor of this tea. It's perfect for starting my day.
-        </div>
-      </div>
-    </div>
-  </div>
-  `;
+   `;
 
     // show the modal
     modal.style.display = 'block';
