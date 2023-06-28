@@ -99,9 +99,25 @@ function registerUser(username, password, callback) {
     });
 }
 
+function updateUser(username, newData, callback) {
+    // Update user query
+    const query = `UPDATE users SET password = ? WHERE username = ?`;
+  
+    db.run(query, [newData.password, username], (err) => {
+      if (err) {
+        console.error('Failed to update user:', err.message);
+        callback(err);
+      } else {
+        console.log('User updated successfully');
+        callback(null);
+      }
+    });
+  }  
+
 // Export the functions to be used by other modules
 module.exports = {
     loginUser,
     registerUser,
-    userExists
+    userExists,
+    updateUser
 };

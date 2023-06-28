@@ -34,6 +34,24 @@ app.post('/token', (req, res) => {
   });
 });
 
+app.put('/users/:username', (req, res) => {
+  // Get the username from the route parameters
+  const username = req.params.username;
+  
+  // Get the new data from the request body
+  const newData = req.body;
+
+  // Update the user in the database
+  login.updateUser(username, newData, (err) => {
+    if (err) {
+      return res.status(500).json({ message: err.message });
+    }
+
+    // Send a success response
+    res.json({ message: 'User updated successfully' });
+  });
+});
+
 // Route to logout and remove a refresh token
 app.delete('/logout', (req, res) => {
   // Remove the specified refresh token from the array
